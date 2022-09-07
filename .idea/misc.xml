@@ -3,7 +3,9 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/MBA/Atividade Fase 2/Projeto/LojadeProdutos/app/src/main/res/layout/activity_detalhe_produto.xml" value="0.17552083333333332" />
         <entry key="..\:/MBA/Atividade Fase 2/Projeto/LojadeProdutos/app/src/main/res/layout/activity_main.xml" value="0.17552083333333332" />
+        <entry key="..\:/MBA/Atividade Fase 2/Projeto/LojadeProdutos/app/src/main/res/layout/detalhe_produto.xml" value="0.17552083333333332" />
         <entry key="..\:/Users/Rejane/AndroidStudioProjects/LojadeProdutos/app/src/main/res/layout/activity_cadastro_produtos.xml" value="0.22" />
         <entry key="..\:/Users/Rejane/AndroidStudioProjects/LojadeProdutos/app/src/main/res/layout/activity_detalhe_produto.xml" value="0.1796875" />
         <entry key="..\:/Users/Rejane/AndroidStudioProjects/LojadeProdutos/app/src/main/res/layout/activity_lista_produtos.xml" value="0.1796875" />
