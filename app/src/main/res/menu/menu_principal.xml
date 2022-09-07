@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    xmlns:app="http://schemas.android.com/apk/res-auto"android:id="@+id/menu_principal">
+
+    <item android:id="@+id/todosPrincipal"
+        android:title="@string/itemTodosPrincipal"
+        app:showAsAction="always"
+        android:background="@color/white"/>
+
+    <item android:id="@+id/acessorios"
+        android:title="@string/itemAcessorios"
+        app:showAsAction="always"
+        android:background="@color/white"/>
+
+    <item android:id="@+id/celulares"
+        android:title="@string/itemCelulares"
+        app:showAsAction="always">
+        <menu>
+            <item android:id="@+id/todosSamsung"
+                android:title="@string/itemTodosCelulares"
+                android:background="@color/white"/>
+            <item android:id="@+id/samsung"
+                android:title="@string/itemSamsung"
+                android:background="@color/white"/>
+            <item android:id="@+id/xiaomi"
+                android:title="@string/itemXiaomi"
+                android:background="@color/white"/>
+            <item android:id="@+id/apple"
+                android:title="@string/itemApple"
+                android:background="@color/white"/>
+            <item android:id="@+id/motorola"
+                android:title="@string/itemMotorola"
+                android:background="@color/white"/>
+        </menu>
+
+    </item>
+
+    <item android:id="@+id/tvs"
+        android:title="@string/itemTvs"
+        app:showAsAction="always"
+        android:background="@color/white"/>
+</menu>

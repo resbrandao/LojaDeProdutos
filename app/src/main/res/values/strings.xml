@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Loja de Produtos</string>
+    <string name="itemTodosPrincipal">todos</string>
+    <string name="itemAcessorios">Acessórios</string>
+    <string name="itemCelulares">Celulares</string>
+    <string name="itemTvs">TVs</string>
+
+    <string name="itemTodosCelulares">todos</string>
+    <string name="itemApple">Apple</string>
+    <string name="itemSamsung">Samsung</string>
+    <string name="itemMotorola">Motorola</string>
+    <string name="itemXiaomi">Xiaomi</string>
+</resources>
