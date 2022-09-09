@@ -1,7 +1,7 @@
 package br.com.fiap.lojadeprodutos.Adapter
 
-import android.app.Activity
 import android.content.Context
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -11,7 +11,8 @@ import androidx.recyclerview.widget.RecyclerView
 import br.com.fiap.lojadeprodutos.DetalheProdutoActivity
 import br.com.fiap.lojadeprodutos.R
 import br.com.fiap.lojadeprodutos.model.Produto
-import android.content.Intent as Intent
+import com.squareup.picasso.Picasso
+
 
 class AdapterProduto(private val context: Context, private val produtos: MutableList<Produto>): RecyclerView.Adapter<AdapterProduto.ProdutoViewHolder>() {
 
@@ -23,22 +24,37 @@ class AdapterProduto(private val context: Context, private val produtos: Mutable
     }
     //metodo responsável por exibir os itens
     override fun onBindViewHolder(holder: ProdutoViewHolder, position: Int) {
- //       holder.foto.setImageResource(produtos[position].foto)
         holder.descricao.text = produtos[position].descricao
-        holder.preco.text = produtos[position].preco
+        holder.valor.text = produtos[position].valor
 
-        holder.itemView.setOnClickListener {
-            context.startActivity(Intent(context, DetalheProdutoActivity::class.java))
+        val imagemCelular = produtos[position].foto
+        Picasso.with(context)
+            .load("$imagemCelular")
+            .resize(120, 120)
+            .into(holder.foto)
+
+        holder.foto.setOnClickListener {
+            val intent = Intent(context, DetalheProdutoActivity::class.java)
+            val descricao = produtos[position].descricao
+            val valor = produtos[position].valor
+            val especificacao = produtos[position].especificacao
+            val foto = produtos[position].foto
+
+            intent.putExtra("Descricao", "$descricao")
+            intent.putExtra("Especificacao", "$especificacao")
+            intent.putExtra("Valor", "$valor")
+            intent.putExtra("Foto", "$foto")
+
+            context.startActivity(intent)
         }
     }
-    
+
     //tamanho da nossa lista
     override fun getItemCount(): Int = produtos.size
 
     inner class ProdutoViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        val foto = itemView.findViewById<ImageView>(R.id.fotoProduto)
-        val descricao = itemView.findViewById<TextView>(R.id.nomeProduto)
-        val preco = itemView.findViewById<TextView>(R.id.precoProduto)
+        val foto = itemView.findViewById<ImageView>(R.id.image_view_foto_produto)
+        val descricao = itemView.findViewById<TextView>(R.id.text_view_descricao_produto)
+        val valor = itemView.findViewById<TextView>(R.id.text_view_preco_produto)
     }
-
 }
